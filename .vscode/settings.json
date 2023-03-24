@@ -1,0 +1,43 @@
+{
+    "deploy.reloaded": {
+        "values": {
+            "outputDir": {
+                "type": "code",
+                "code": "require('os').homedir() + '/'"
+            }
+        },
+        
+        "packages": [
+            {
+                "name": "Better Faction Info",
+                "description": "Better Faction Info",
+
+                "button": {
+                    "text": "Deploy to Better Faction Info",
+                    
+                    "targets": [ "Better Faction Info" ]
+                },
+
+                "files": [
+                    "**",
+                ],
+                "exclude": [
+                    ".vscode/**",
+                    "*.md"
+                ],
+
+                "deployOnSaveButton": [ "Better Faction Info" ]
+            },
+        ],
+
+        "targets": [          
+            {
+                "type": "local",
+                "name": "Better Faction Info",
+                "description": "Local folder",
+
+                "dir": "${outputDir}/Documents/Paradox Interactive/Stellaris/better_faction_info/"
+            },
+        ]
+    }
+}
