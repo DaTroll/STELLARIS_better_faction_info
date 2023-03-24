@@ -36,7 +36,7 @@
                 "name": "Better Faction Info",
                 "description": "Local folder",
 
-                "dir": "${outputDir}/Documents/Paradox Interactive/Stellaris/better_faction_info/"
+                "dir": "${outputDir}/Documents/Paradox Interactive/Stellaris/mod/better_faction_info/"
             },
         ]
     }
