@@ -509,13 +509,13 @@
  POP_FACTION_NO_CURRENT_EFFECTS_DESC:0 "The $FACTION$ have no effects at this time."
 
 # Ruler and Councilor Ethics demands
- faction_demand_HAPPY_WE_RULE:0 "Ruler of their Ethic"
+ faction_demand_HAPPY_WE_RULE:0 "Ruler of their Ethic (+15/+0)"
  faction_demand_HAPPY_WE_RULE_desc:0 "Having a Ruler of their ethic pleases the [Root.GetName]."
- faction_demand_HATE_RULER_ETHICS:0 "Ruler shouldn't have Opposing Ethic"
+ faction_demand_HATE_RULER_ETHICS:0 "Ruler shouldn't have Opposing Ethic (+0/-15)"
  faction_demand_HATE_RULER_ETHICS_desc:0 "Having a Ruler of the opposing ethic displeases the [Root.GetName]."
- faction_demand_ACCEPTABLE_RULER_ETHICS:0 "Ruler has Empire Ethic"
+ faction_demand_ACCEPTABLE_RULER_ETHICS:0 "Ruler has Empire Ethic (+5/-5)"
  faction_demand_ACCEPTABLE_RULER_ETHICS_desc:0 "Having a Ruler matching the Empire's Ethics is tolerated by the [Root.GetName].\n\nA Ruler of their own Ethic would be even better."
- faction_demand_REPRESENTED_ON_COUNCIL:0 "Represented on Council"
+ faction_demand_REPRESENTED_ON_COUNCIL:0 "Represented on Council (+10/-10)"
  faction_demand_REPRESENTED_ON_COUNCIL_desc:0 "Having a Ruler or Councilor of their ethic will please the [Root.GetName]."
 
  ### SEPARATIST
