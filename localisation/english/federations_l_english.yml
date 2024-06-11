@@ -26,9 +26,12 @@
  TABBED_NEW_LINE: "\n$t$"
  NEW_LINE: "\n"
  DOUBLE_NEW_LINE: "\n\n"
+ AVAILABLE_BUILDINGS: "Available Buildings:"
  AVAILABLE_HOLDINGS: "Available Holdings:"
  AVAILABLE_STARBASE_BUILDINGS: "Available Starbase Buildings:"
  AVAILABLE_BOMBARDMENT_STANCE: "Available Bombardment Stances:"
+ AVAILABLE_POLICIES: "Available Policies:"
+ UNLOCKS_FEATURE: "Unlocks Feature:"
 
  origin_default:0 "Prosperous Unification"
  origin_default_desc:1 "Through its strife and triumphs, this society has reached every young civilization's ambition: a homeworld with unified goals, and a path open to the stars."
@@ -39,19 +42,22 @@
 
  origin_mechanists:0 "$civic_mechanists$"
  origin_mechanists_desc:0 "This civilization has been preoccupied with the idea of metallic automatons since the early Steam Age. Although many said it could not be done, the first true robots left the assembly lines long before even rudimentary space flight was achieved."
- origin_tooltip_mechanists_effects:3 "- ['concept_robots', £mod_planet_jobs_robotic_produces_mult£ Robot] §I$pops_with_icon$§!: 8$NEW_LINE$- Homeworld: ['concept_robot_assembly_plant',£building£ Robot Assembly Plant]$NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$$TABBED_NEW_LINE$- ['concept_powered_exoskeletons', £engineering_research£ $tech_powered_exoskeletons$]$TABBED_NEW_LINE$- ['concept_robotic_workers', £engineering_research£ $tech_robotic_workers$]$NEW_LINE$- $GUARANTEED_RESEARCH_OPTION_STRING$ ['concept_robomodding', £engineering_research£ $tech_robomodding$]"
+ origin_tooltip_mechanists_effects:3 "- ['concept_robots', £mod_planet_jobs_robotic_produces_mult£ Robot] §I$pops_with_icon$§!: 8$TABBED_NEW_LINE$- Mechanical Trait: ['concept_adaptive_frames']$NEW_LINE$- Homeworld: ['concept_robot_assembly_plant',£building£ Robot Assembly Plant]$NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$$TABBED_NEW_LINE$- ['concept_powered_exoskeletons', £engineering_research£ $tech_powered_exoskeletons$]$TABBED_NEW_LINE$- ['concept_robotic_workers', £engineering_research£ $tech_robotic_workers$]$NEW_LINE$- $GUARANTEED_RESEARCH_OPTION_STRING$ ['concept_robomodding', £engineering_research£ $tech_robomodding$]"
  origin_syncretic_evolution:0 "$civic_syncretic_evolution$"
  origin_syncretic_evolution_desc:0 "A second species forms an integral part of this civilization. They are big, strong, and most of them have the intelligence of a particularly dim-witted child. Ancient wars have culled their species of their most aggressive tendencies, leaving them quite servile."
- origin_tooltip_syncretic_evolution_effects: "- £pop£ §IPops§! with ['concept_syncretic_proles'] Trait: 12"
+ origin_tooltip_syncretic_evolution_effects: "- Organic £pop£ §IPops§! with ['concept_syncretic_proles'] Trait: 12"
  origin_life_seeded:0 "$civic_life_seeded$"
- origin_life_seeded_desc:0 "This civilization has evolved in a paradise, possibly designed just for them."
+ origin_life_seeded_desc:1 "This civilization's home is a paradise, possibly designed just for them."
  origin_tooltip_life_seeded_effects: "- $HOMEWORLD$ ['concept_pc_gaia'] (Size: £planetsize£ 30) with §IRare Planetary Features§!$NEW_LINE$- $SPECIES_TRAITS$ ['concept_gaia_preference']"
  origin_tooltip_life_seeded_negative_effects: "- $NO_GUARANTEED_WORLDS$"
  origin_post_apocalyptic:0 "$civic_post_apocalyptic$"
- origin_life_seeded_habinte: "$origin_life_seeded$"
- origin_life_seeded_habinte_desc: "$origin_life_seeded_desc$"
+ origin_life_seeded_ai_only: "$origin_life_seeded$"
+ origin_life_seeded_ai_only_desc: "$origin_life_seeded_desc$"
  origin_post_apocalyptic_desc:1 "Baptized by nuclear fire, this civilization has faced total annihilation - and survived. Devastated yet unbroken, they have rebuilt civilization from the ashes of their old world."
  origin_tooltip_post_apocalyptic_effects: "- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $SPECIES_TRAITS$ ['concept_survivor']"
+ origin_post_apocalyptic_machines: "Radioactive Rovers"
+ origin_post_apocalyptic_machines_desc: "In the aftermath of a devastating nuclear disaster, these machines emerged as the sole survivors of a once-flourishing civilization. By continuing to fulfill their designated purpose, they gradually rebuilt society from the uninhabitable ashes of their old world."
+ origin_tooltip_post_apocalyptic_machines_effects: "- $HOMEWORLD$ ['concept_pc_nuked']$NEW_LINE$- $SPECIES_TRAITS$ ['concept_robot_survivor']"
 
  origin_shattered_ring:0 "Shattered Ring"
  origin_shattered_ring_desc:1 "This civilization inhabits a Ring World built by unknown forerunners. If it can be understood and fully repaired it will grant them great power."
@@ -171,6 +177,11 @@
  SHIP_AURA_HYPERLANE:0 "Subspace Amplifier"
  SHIP_AURA_PD_PENETRATION:0 "ECM Emitters"
  SHIP_AURA_BOMBARDMENT:0 "Munitions Plant"
+ SHIP_AURA_STRIKE_CRAFT_DESC: "$ship_aura_components_DESC$"
+ SHIP_AURA_RANGE_DESC: "$ship_aura_components_DESC$"
+ SHIP_AURA_HYPERLANE_DESC: "$ship_aura_components_DESC$"
+ SHIP_AURA_PD_PENETRATION_DESC: "$ship_aura_components_DESC$"
+ SHIP_AURA_BOMBARDMENT_DESC: "$ship_aura_components_DESC$"
 
  START_SCREEN_SRW:0 "If we ever knew how our people arrived on [GetHomeWorldName] our histories have long forgotten it. What we do know is that just over 2000 years ago some inconceivable cataclysm destroyed much of the Ring and killed most of the population, and that our people eventually rose from those ruins.\n\nOur civilization has grown, flourished, and now stands ready to explore the galaxy, whether again or for the first time. But despite all our progress, we still have a long way to go before we can understand and repair the Ringworld which is our home."
 
@@ -240,6 +251,8 @@
  IS_NOT_VOTING_RESOLUTION:0 "The $GALACTIC_COMMUNITY$ is currently NOT voting on $RESOLUTION|Y$"
  IS_LAST_RESOLUTION_CHANGED:0 "The last resolution the $GALACTIC_COMMUNITY$ considered was $RESOLUTION|Y$"
  IS_NOT_LAST_RESOLUTION_CHANGED:0 "The last resolution the $GALACTIC_COMMUNITY$ considered was NOT $RESOLUTION|Y$"
+ IS_LAST_RESOLUTION_CATEGORY_CHANGED: "The category of the last resolution the $GALACTIC_COMMUNITY$ considered was $CATEGORY|Y$"
+ IS_NOT_LAST_RESOLUTION_CATEGORY_CHANGED: "The category of the last resolution the $GALACTIC_COMMUNITY$ considered was NOT $CATEGORY|Y$"
  IS_POSITION_ON_CURRENT_RESOLUTION:0 "Position on the current $GALACTIC_COMMUNITY$ resolution is $POSITION|Y$"
  IS_NOT_POSITION_ON_CURRENT_RESOLUTION:0 "Position on the current $GALACTIC_COMMUNITY$ resolution is NOT $POSITION|Y$"
  IS_POSITION_ON_LAST_RESOLUTION:0 "Position on the last $GALACTIC_COMMUNITY$ resolution was $POSITION|Y$"
@@ -294,7 +307,7 @@
  OPINION_LEVEL_TREND:0 "With that trend we will have $RELATION$ Relations in $MONTHS$ month(s)"
 
  requires_terrible_opinion_or_supremacist:2 "$TRIGGER_FAIL$§RRequires $OPINION_TERRIBLE$, §YRivalry§!, an envoy sent to §YHarm Relations§!, or one empire must either be in the $diplo_stance_supremacist_name$ $DIPLOMACY_STANCE$, $diplo_stance_animosity_name$ $DIPLOMACY_STANCE$, or be a §H$COUNTRY_FALLEN_EMPIRE$§!.§!\n"
- requires_poor_or_worse_opinion:1 "$TRIGGER_FAIL$§RRequires $OPINION_POOR$ an envoy sent to §YHarm Relations§!.§!"
+ requires_poor_or_worse_opinion:1 "$TRIGGER_FAIL$§RRequires $OPINION_POOR$ or an envoy sent to §YHarm Relations§!.§!"
  requires_excellent_or_better_opinion:1 "$TRIGGER_FAIL$§RRequires $OPINION_EXCELLENT$ or an envoy sent to §YImprove Relations§!.§!"
  requires_good_or_better_opinion:1 "$TRIGGER_FAIL$§RRequires $OPINION_GOOD$ or an envoy sent to §YImprove Relations§!.§!"
  requires_neutral_or_better_opinion:1 "$TRIGGER_FAIL$§RRequires $OPINION_NEUTRAL$ or an envoy sent to §YImprove Relations§!.§!"
@@ -308,6 +321,20 @@
  easy_rivalry:0 "Restrictions on the §YRival§! action are relaxed both for and against us.\n"
  envoy_costs:0 "Envoys"
  diplo_closed_borders:0 "$opinion_closed_borders$"
+
+ requires_embassy_or_diplomatic_networking: "$TRIGGER_FAIL$§RRequires an §YEmbassy§! OR the §Y$tr_diplomacy_diplomatic_networking$§! Tradition§!"
+
+ requires_embassy_diplomatic_networking_or_universal_transactions: "$TRIGGER_FAIL$§RRequires an §YEmbassy§!, the §Y$tr_diplomacy_diplomatic_networking$§! Tradition OR the §Y$ap_universal_transactions$§! Ascension Perk§!"
+
+ requires_embassy_or_improving_relations: "$TRIGGER_FAIL$§RRequires an §YEmbassy§! OR an Envoy §YImproving Relations§!§!"
+
+ requires_10_trust_or_neutral: "$TRIGGER_FAIL$§RRequires $OPINION_NEUTRAL$ OR §Y10§! Trust§!"
+
+ requires_20_trust_or_good: "$TRIGGER_FAIL$§RRequires $OPINION_GOOD$ OR §Y20§! Trust§!"
+
+ requires_30_trust_or_excellent: "$TRIGGER_FAIL$§RRequires $OPINION_EXCELLENT$ OR §Y30§! Trust§!"
+
+ requires_50_trust_or_excellent: "$TRIGGER_FAIL$§RRequires $OPINION_EXCELLENT$ OR §Y50§! Trust§!"
 
  EMPIRE_OVERVIEW:0 "Empire Overview"
 
@@ -360,13 +387,13 @@
  FEDERATION_XP_UNLOCKS:0 "§HLevel XP Unlocks§!"
  FEDERATION_LEVEL_UNLOCK:0 "\tLVL $LEVEL$: $XP|Y0$ xp"
  FEDERATION_EXPERIENCE_DESC:0 "§E§HFederation Experience§! increases as the federation remains unified. It will decrease as we become more divided.\n§HNew Perks and Abilities§! are gained as new §HLevels§! are unlocked with §HXP§!§!"
- FEDERATION_ENVOYS:0 "Envoys"
- FEDERATION_ENVOYS_COHESION:0 "Total Envoys: $ENVOYS|+0$\n\tCohesion Impact: $IMPACT|+2$"
+ FEDERATION_ENVOYS:1 "Representatives"
+ FEDERATION_ENVOYS_COHESION:1 "Total Representatives: $ENVOYS|+0$\n\tCohesion Impact: $IMPACT|+2$"
  FEDERATION_ENVOYS_COUNTRY:0 "\t$NAME$: $COUNT|Y0$"
- FEDERATION_ENVOYS_CONTRIBUTORS:0 "§EEnvoy Contributors:§! ($VALUE|Y$)"
+ FEDERATION_ENVOYS_CONTRIBUTORS:1 "§ERepresentative Contributors:§! ($VALUE|Y$)"
  FEDERATION_ENVOYS_SLACKERS:0 "Members Not Contributing:"
  FEDERATION_ENVOYS_SLACKER:0 "\t$NAME|R$"
- FEDERATION_ENVOYS_DESC:0 "§E§HEnvoys§! are representatives from members within the federation. They boost §HFederation Cohesion§! by working hard to keep our federation unified.§!"
+ FEDERATION_ENVOYS_DESC:0 "§E§HRepresentatives§! are Officials from members within the federation. They boost §HFederation Cohesion§! by working hard to keep our federation unified.§!"
  FEDERATION_LEVEL_PERKS_DESC:0 "§ELevel $LEVEL$ Perks:§!"
  FEDERATION_LEVEL_PERK:0 "\t$PERK|Y$"
  FEDERATION_LEVEL_HAS_DECAYED:0 "§RWe lost experience required for the level(s). $DAYS|Y$ days left until we will lose perk effects.§!"
@@ -784,7 +811,7 @@
  rare_tech_boost_effect:0 "§MRare technologies§! already unlocked by another federation member now appear at §Y2§! times the normal rate. This effect would change a §Y1%§! chance into a §Y2%§! chance."
  crisis_research_1:0 "Research Mobilization"
  crisis_research_1_desc:0 "When faced with an obvious and imminent threat to all galactic life, the scientific community must be prepared to set aside abstract experimentation in favor of purely defensive applications."
- crisis_research_1_effect:1 "$FEDERATION_PERK_MEMBER_MOD$\nDuring an ongoing Endgame Crisis, gain §Y20%§! Research Speed."
+ crisis_research_1_effect:1 "$FEDERATION_PERK_MEMBER_MOD$\nDuring an ongoing Endgame Crisis, gain §Y10%§! Research Speed."
  crisis_research_2:0 "Suspended Ethical Protocols"
  crisis_research_2_desc:0 "No taboo is too strong, no moral precept too sacrosanct, when the only alternative is complete annihilation."
  tech_diplo_weight_1:0 "Technocrat"
@@ -826,10 +853,10 @@
  damage_crisis_2_desc:0 "If we intend to possess the moral authority to govern, we need to show the galaxy we have not just the will to defend it from outside threats, but also the means."
  envoy_unity_1:0 "Federal Attachés"
  envoy_unity_1_desc:0 "The arbiters of the federation agenda - our envoys - are savvy and active in their effort to improve the sense of belonging and mutual benefit between our members."
- envoy_unity_1_effect:2 "Gain §Y2§! Unity and §Y5%§! Trust Growth for each Envoy assigned to the federation by any member."
+ envoy_unity_1_effect:2 "Gain §Y2§! Unity and §Y5%§! Trust Growth for each Official assigned to the federation by any member."
  envoy_unity_2:0 "Federal Unity"
  envoy_unity_2_desc:1 "Our envoys work ceaselessly to promote and encourage the federation's agenda and purpose, inspiring kinship and confidence across the galaxy."
- envoy_unity_2_effect:1 "Gain §Y2§! Unity and raise Trust Cap by §Y5§! for each Envoy assigned to the federation by any member."
+ envoy_unity_2_effect:1 "Gain §Y2§! Unity and raise Trust Cap by §Y5§! for each Official assigned to the federation by any member."
  cohesion_join_1:0 "Welcoming Nature"
  cohesion_join_1_desc:0 "Regardless of cultural or biological differences, growth of the federation is to everyone's benefit."
  cohesion_join_1_effect:0 "New members impose a §Y50%§! smaller Cohesion penalty to the federation."
@@ -851,7 +878,7 @@
 
  spiritualist_federation_passive:0 "$spiritualist_federation$"
  spiritualist_federation_passive_desc:0 "$spiritualist_federation_desc$"
- spiritualist_federation_passive_tooltip:0 "Robotic Empires may not become president of the $spiritualist_federation$ under normal circumstances.\n$mod_country_unity_produces_mult$: §G+10%§!"
+ spiritualist_federation_passive_tooltip:0 "$mod_country_unity_produces_mult$: §G+10%§!"
  spiritualist_envoys_1:0 "Proselytizing Envoys"
  spiritualist_envoys_1_desc:0 "Many are the sacrileges that our envoys may prevent."
  spiritualist_envoys_1_effect:0 "§YEnvoys§! assigned to the Federation will now provide §G50%§! more §YCohesion§! and increase §YSpiritualist§! ethic attraction within our Empire by §Y20%§!."
@@ -970,6 +997,7 @@
  federation_acceptance_strong_president:0 "Is Strongest and President"
  federation_acceptance_weaker:0 "Is less powerful"
  federation_acceptance_has_subjects:0 "Has Subjects"
+ federation_acceptance_has_no_subjects: "Has no Subjects"
 
  #Federation specific
  federation_acceptance_hegemony_or_default:0 "$default_federation$ or $hegemony_federation$"
@@ -1286,7 +1314,7 @@
 
  resolution_greatergood_universal_prosperity_mandate:0 "Universal Prosperity Mandate"
  resolution_greatergood_universal_prosperity_mandate_desc:0 "If our galaxy spanning civilizations cannot provide for all of our people, then we have failed them. There is no excuse for anyone in the galaxy to want for anything. We should additionally act to redistribute excess wealth for the betterment of all."
- resolution_greatergood_universal_prosperity_mandate_tooltip:0 "All living standards other than §YShared Burdens§!, §YUtopian Abundance§!, §YChemical Bliss§!, or §YMandatory Pampering§! are §Rbanned§!.\n\n§YAssimilating§! organics into a §YDriven Assimilator§! or §YHive Mind§! empire is §Rbanned§!.\n\nEmpires that are not §YEgalitarian§! or §YRogue Servitors§! may be unable to meet these requirements and will be in §RBreach of Galactic Law§!!"
+ resolution_greatergood_universal_prosperity_mandate_tooltip:1 "All living standards other than §YShared Burdens§!, §YEmployee Ownership§!, §YUtopian Abundance§!, §YChemical Bliss§!, or §YMandatory Pampering§! are §Rbanned§!.\n\n§YAssimilating§! organics into a §YDriven Assimilator§! or §YHive Mind§! empire is §Rbanned§!.\n\nEmpires that are not §YEgalitarian§! or §YRogue Servitors§! may be unable to meet these requirements and will be in §RBreach of Galactic Law§!!"
 
  # Mutual Defense
  resolution_category_mutualdefense:0 "Mutual Defense"
@@ -1759,12 +1787,12 @@
  galactic_community:0 "Galactic Community"
  galactic_community_click_to_open:1 "§GClick to open $GALACTIC_COMMUNITY$§!"
  galactic_community_TITLE:0 "$galactic_community$"
- galactic_community_desc:0 "Sending an envoy to represent our interests in the Galactic Community will increase our Diplomatic Weight by §G+10%§!.\n\nWe will be unable to reassign them for §Y£time£360§!."
+ galactic_community_desc:0 "Sending an Official to represent our interests in the Galactic Community will increase our Diplomatic Weight by §G+10%§!."
 
  galactic_empire_TITLE:0 "$GALACTIC_EMPIRE$"
- galactic_empire_desc:0 "Sending an envoy to represent our interests in the $GALACTIC_EMPIRE$ will increase our Diplomatic Weight by §G+10%§!.\n\nWe will be unable to reassign them for §Y£time£360§!."
+ galactic_empire_desc:0 "Sending an Official to represent our interests in the $GALACTIC_EMPIRE$ will increase our Diplomatic Weight by §G+10%§!."
 
- federation_desc:0 "Sending an envoy to coordinate matters within our Federation will improve Federation Cohesion.\n\nWe will be unable to reassign them for §Y£time£360§!."
+ federation_desc:0 "Sending an Official to coordinate matters within our Federation will improve Federation Cohesion."
 
  default_envoy:0 "Envoy"
  ENVOY_OPINION_EFFECT:0 "$VAL|+=0$"
@@ -1774,13 +1802,14 @@
  IN_RECESS_HELP:0 "\n§HThe Senate is currently in recess.§!\nGive your Support to Proposed Resolutions in the Queue to influence which Resolution will move onto the floor when the next Session starts."
 
  ENVOYS_HEADER:0 "§HEnvoys§!"
- ENVOYS_STATUS:0 "$ASSIGNED|Y$ out of $TOTAL|Y$ Envoys have assignments\n\nEnvoys can be sent to other empires for diplomatic tasks, to represent you in the Galactic Community, or to maintain your Federation.\n\nCertain §YCivics§!, §YBuildings§!, §YFederation Perks§!, and building an §YInterstellar Assembly§! can give you additional Envoys."
+
+ ENVOYS_STATUS:0 "$ASSIGNED|Y$ out of $TOTAL|Y$ Envoys have assignments\n$h_line$§EEnvoys handle first contact with unknown aliens, are sent to other empires for diplomatic tasks, and manage spy networks.$tt_gain$§Y-§! Build an §HInterstellar Assembly§! megastructure.\n§Y-§! Utilize certain §HCivics§!, §HBuildings§!, §HFederation Perks§!, and §HLeader Traits§!.§!"
  ASSIGN_ENVOY:0 "Assign Envoy"
  ASSIGN_ENVOY_NOT_MEMBER_TOOLTIP:0 "§HAssign Envoy§!\n§RYou need to be a member of the Galactic Community to assign envoys§!"
- ASSIGN_ENVOY_TOOLTIP:0 "§HAssign Envoy§!\n§GClick to open the Assign Envoy view§!"
- ASSIGN_ENVOY_DELAYED:0 "§EAssign Envoys to increase your §!§HDiplomatic Weight§!"
+ ASSIGN_ENVOY_TOOLTIP:1 "§HAssign Official§!\n§GClick to open the Assign Official view§!"
+ ASSIGN_ENVOY_DELAYED:1 "§EAssign an Official to increase your §!§HDiplomatic Weight§!"
  ENVOYS_ASSIGNED:0 "$ASSIGNED|Y$"
- ENVOYS_IN_THE_COMMUNITY:0 "§HEach Envoy assigned to the community as a delegate will increase your total diplomatic weight§!"
+ ENVOYS_IN_THE_COMMUNITY:1 "§HAssigning an Official to the community will increase your total diplomatic weight§!"
  ENVOYS_IN_THE_FEDERATION:0 "§HEach Envoy assigned to the federation contributes to its cohesion§!"
 
  MESSAGE_SENATE_IN_SESSION_TITLE:1 "Senate Is Now in Session"
@@ -1831,7 +1860,7 @@
  CALL_IN_FAVOR_UNABLE:0 "We are not able to call in any favors."
  CALL_IN_FAVOR_ONLY_IF_VOTING:0 "We must take a stand for or against the Resolution to call in favors."
  CALL_IN_FAVOR_ONLY_IF_IN_FAVOR:0 "Can only call in favors if we are supporting the Resolution."
- CALL_IN_FAVOR_UNAVAILABLE:0 "We have no Favors available. Trade with an Empire for Favors to gain them."
+ CALL_IN_FAVOR_UNAVAILABLE:1 "We have no Favors available."
  CALL_IN_FAVOR_ICON:0 "£call_favor£ $CALL_IN_FAVOR$"
  CLICK_CALL_IN_FAVOR:1 "§GClick to Call in Favor(s) to boost your Diplomatic Weight on this Resolution§!"
  CALL_IN_FAVOR_TOOLTIP:0 "§HCall in Favor§!"
@@ -1893,7 +1922,7 @@
  VETO_OWN_RESOLUTION:0 "You cannot Veto your own Resolution"
 
  STRONG_DIPLO_STANCE:0 "Strong Diplomacy (+10/-0)"
- STRONG_DIPLO_STANCE_DESC:0 "Having a §Y$diplo_stance_belligerent$§! or §Y$diplo_stance_supremacist$§! Diplomatic Stance pleases the [Root.GetName]."
+ STRONG_DIPLO_STANCE_DESC:0 "Having a §Y$diplo_stance_belligerent$§!, §Y$diplo_stance_supremacist$§!, or §Y$diplo_stance_animosity$§! Diplomatic Stance pleases the [Root.GetName]."
  WEAK_DIPLO_STANCE:0 "Weak Diplomacy (+0/-10)"
  WEAK_DIPLO_STANCE_DESC:0 "Showing weakness by having a §Y$diplo_stance_cooperative$§! Diplomatic Stance displeases the [Root.GetName]."
  ISOLATIONIST_DIPLO_STANCE:0 "Isolationist Diplomacy (+10/-10)"
@@ -1917,8 +1946,9 @@
  FROM_TECH_VALUE:0 "From Tech: $VALUE|Y$"
  NUM_ENVOYS_VALUE:0 "Number of Envoys: $VALUE|Y$"
  FROM_COUNCIL_VALUE:0 "From Council: $VALUE|Y$"
- IMPROVE_RELATIONS_VALUE:0 "Improve Relations: $VALUE|+=0$ ($INCREASE|+=0$ per month)"
- HARM_RELATIONS_VALUE:0 "Harm Relations: $VALUE|+=0$ ($DECREASE|+=0$ per month)"
+ MISSING_DIPLOMACY_HEAD: "Missing Minister of State"
+ IMPROVE_RELATIONS_VALUE:1 "Improve Relations: $VALUE|+=2$ ($INCREASE|2$ per month)"
+ HARM_RELATIONS_VALUE:1 "Harm Relations: $VALUE|+=2$ ($DECREASE|2$ per month)"
 
  RELATION_LEVELS:0 "§HRelation Levels§!"
  RELATION_LEVEL_VALUE:0 "$LEVEL$ ($LOWER|+0$ to $UPPER|+0$)"
@@ -2161,7 +2191,7 @@
  LESSENGER_REMODEL:0 "Upscaling the Messenger"
  LESSENGER_REMODEL_TITLE:0 "Upscaling the Messenger"
  LESSENGER_REMODEL_DESC:0 "The extraordinary level of technology and capacity of §YThe Lesser Messenger§! can only be rivaled by it's ridiculous scale. Of the ship's tiny creator species thousands could fit into the vessel, but to fit even a skeleton crew of our species in there is going to require a massive overhaul."
- lessenger_75:0 "The The Lesser Messenger is still too small for our crew!"
+ lessenger_75:1 "The Lesser Messenger is still too small for our crew!"
  lessenger_50:0 "$lessenger_75$"
  lessenger_25:0 "$lessenger_75$"
 
@@ -2228,7 +2258,7 @@
  THE_GATEWAY_CANNON_PROJECT_DESC:0 "Following the alien blueprint found in a previous archaeological excavation, we can assemble a construction that will briefly open the gateway in our home system allow a Science Ship to pass through."
 
  origin.1013.name:0 "Opening the Gate"
- origin.1013.desc:0 "Recent archaeological uncoverings have revealed a way to build a construct that can briefly open the mysterious gateway and allow a Science Ship to pass through.\n\n §RWarning!§!\n\nThis is a high risk mission! There is no guarantee that either §YScientist§! or §YScience Ship§! will return from such a perilous journey. Prepare accordingly."
+ origin.1013.desc:0 "Recent archaeological findings have revealed a way to build a construct that can briefly open the mysterious gateway and allow a Science Ship to pass through.\n\n §RWarning!§!\n\nThis is a high risk mission! There is no guarantee that either §YScientist§! or §YScience Ship§! will return from such a perilous journey. Prepare accordingly."
 
  ### Origin - Eldest Sibling text
  origin_eldest_sibling:0 "Eldest Sibling"
@@ -2328,7 +2358,7 @@
  origin.1300.desc:1 "The resource cache was indeed a deception. The real treasure lay behind a hidden door: a final message, recorded by one of the Benefactor aliens.\n\nEons ago they were at war with a merciless alien race known as §SThe Relentless§!. Entire civilizations had already perished in the Relentless' wake, and the Benefactors were next. The desperate Benefactors sought their last resort, before all would be lost. They succeeded with a device that ravaged The Relentless' neurological physique, instantaneously primitivizing an entire race.\n\nRobbed of their bloodthirsty intellect, The Relentless became docile and harmless. The Benefactors rounded them up and exiled them to our home world.\n\nThe Relentless are our ancestors."
  origin.1300.a:0 "A bittersweet culmination."
  origin.1305.name:0 "Tyrant's Remorse"
- origin.1305.desc:0 "The resource cache was a deception. A hidden recording device was eventually found within the cave:\n\n§Y'Eons ago, my species - known at the time as §SThe Relentless§! - laid waste to the galaxy. Any sentient alien that crossed our path was engaged by our fleets without hesitation or mercy.\n\nEventually we evolved beyond our warmonger ways. We looked at our bloody history and no longer felt pride - only shame and regret.\n\nRetracing our ancestor's ste...'§!\n\nThe rest is scrambled. Scientist [Leader.GetName] is convinced that distortion can be restored, but it will take some time."
+ origin.1305.desc:1 "The resource cache was a deception. A hidden recording device was eventually found within the cave:\n\n§Y'Eons ago, my species - known at the time as §SThe Relentless§! - laid waste to the galaxy. Any sentient alien that crossed our path was engaged by our fleets without hesitation or mercy.\n\nEventually we evolved beyond our warmonger ways. We looked at our savage history and no longer felt pride - only shame and regret.\n\nRetracing our ancestor's ste...'§!\n\nThe rest is scrambled. Scientist [Leader.GetName] is convinced that distortion can be restored, but it will take some time."
  origin.1305.a:0 "Make it work."
  origin.1310.name:0 "Tyrant's Remorse - Part II"
  origin.1310.desc:1 "[Leader.GetName] has successfully restored the scrambled alien recording:\n\n'§YRetracing our ancestor's steps on a quest for redemption, we reached this system. Here our predecessors annihilated the $NAME_ThwaaPhyr$ race. We didn't know then that the $NAME_ThwaaPhyr$ had concealed another species - the [Root.Owner.GetSpeciesName] - by using a procedure which suppressed the intellectual capacity of the [Root.Owner.GetSpeciesNamePlural], rendering them harmless to us.\n\nThis effect is irreversible. The [Root.Owner.GetSpeciesName] are still mere savages. Now we hope that one day they'll find their way back to the stars, and that they find our tokens of atonement.'§!\n\nAnd there it is: our history explained. Now let's focus on the future."
@@ -2429,7 +2459,7 @@
  origin.1390.name:0 "The Silent Freighter"
  origin.1390.desc:0 "On entering the system, our sensors immediately picked up multiple anomalies.\n\nThe most prominent reading was a gigantic energy cloud which - upon closer inspection - turned out to be hundreds of smaller fusion drive trails like the one previously discovered. An absolutely massive fleet must've come to a halt here for some reason.\n\nNext to this 'fleet parking lot' our scans picked up another kind of reading: a derelict transport ship. This freighter appears to be as old as the energy signatures, but traces of its own signature differs from that of the lost fleet.\n\nWe should inspect the abandoned ship closer."
  origin.1395.name:0 "The Maker's Might"
- origin.1395.desc:0 "The freighter contained a log. Though damaged by time, some data could still be recovered.\n\nThe freighter had been intercepted by the massive fleet. Unclear as to how or why, the Captain of the freighter ended up conversing with the Admiral of the Relentless fleet. Apparently they spoke for weeks, but what they spoke of remains unknown - although the phrase 'nature of power' recurs frequently.\n\nThe fleet suddenly departed, leaving the freighter unscathed. The last entry in the log was a quote from the Admiral: §Y'No, leave them. Destruction is easy. Real power is the ability to create.'§!\n\nWe have analyzed the fleet trails and may take up our pursuit again."
+ origin.1395.desc:0 "The freighter contained a log. Though damaged by time, some data could still be recovered.\n\nThe freighter had been intercepted by the massive fleet. Unclear as to how or why, the Captain of the freighter ended up conversing with the Commander of the Relentless fleet. Apparently they spoke for weeks, but what they spoke of remains unknown - although the phrase 'nature of power' recurs frequently.\n\nThe fleet suddenly departed, leaving the freighter unscathed. The last entry in the log was a quote from the Commander: §Y'No, leave them. Destruction is easy. Real power is the ability to create.'§!\n\nWe have analyzed the fleet trails and may take up our pursuit again."
  origin.1400.name:0 "The Tyrant's Rest"
  origin.1400.desc:0 "This is where the fusion drive trail ends. It's quite likely that any remnants of the Relentless species - if there are any - will be found here.\n\nSo far the only sensor reading of any particular interest comes from what appears to be some kind of small space station. An energy pulse radiates from it at set intervals, but apart from that there's no sign of any activity.\n\nWe can proceed to investigate immediately."
 
@@ -2540,10 +2570,14 @@
  origin_void_dwellers_desc:1 "This civilization has made its home in space for as long as it has maintained records - life in a typical planetary environment is anathema to them. They live in several orbital habitats that were only recently united."
  origin_tooltip_void_dwellers_effects:9 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- $SPECIES_TRAITS$$TABBED_NEW_LINE$- ['concept_void_dweller', $trait_void_dweller_1$]$TABBED_NEW_LINE$- ['concept_habitat_preference', $trait_pc_habitat_preference$]$NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ ['concept_habitat_1', £engineering_research£ $tech_habitat_1$]$NEW_LINE$- $GUARANTEED_RESEARCH_OPTION_STRING$ ['concept_habitat_2', £engineering_research£ $tech_habitat_2$]$NEW_LINE$- ['concept_guaranteed_colonies']: Resource-rich systems instead of Colonizable Planets $NEW_LINE$- $ap_voidborn_habitat_effect$"
  trait_void_dweller_1:0 "Void Dweller"
- trait_void_dweller_1_desc:1 "§LThis species thrives in orbital habitats, with an instinctive ability to efficiently navigate their maze-like corridors and complicated architecture. However their weakened immune systems do not respond well to a planetary environment.§!"
+ trait_void_dweller_1_desc:2 "§LThis species thrives in orbital habitats, with an inherent ability to efficiently navigate their maze-like corridors and complicated architecture. They are at ease in zero gravity but do not respond well to a planetary environment.§!"
  void_dweller_trait_tooltip:0 "Pop Happiness on Non-Artificial Worlds: §R-30%§!"
- trait_void_dweller_2:0 "$trait_void_dweller_1$"
- trait_void_dweller_2_desc:0 "§LThis species is used to the recycled air and sterile compartments of orbital habitats, and their weakened immune systems do not respond well to a planetary environment.§!"
+ origin_void_machines: "Voidforged"
+ origin_void_machines_desc: "At first, the creators of this machine civilization designed them for eternal space travel, fully optimizing them to function seamlessly in zero gravity environments. After enduring eons of isolation, these machines have recently restored unity among the orbital habitats scattered throughout their home system."
+ origin_tooltip_void_machines_effects: "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- $SPECIES_TRAITS$$TABBED_NEW_LINE$- ['concept_void_dweller_2', $trait_void_dweller_2$]$TABBED_NEW_LINE$- ['concept_habitat_preference', $trait_pc_habitat_preference$]$NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ ['concept_habitat_1', £engineering_research£ $tech_habitat_1$]$NEW_LINE$- $GUARANTEED_RESEARCH_OPTION_STRING$ ['concept_habitat_2', £engineering_research£ $tech_habitat_2$]$NEW_LINE$- ['concept_guaranteed_colonies']: Resource-rich systems instead of Colonizable Planets $NEW_LINE$- $ap_voidborn_habitat_effect$"
+ trait_void_dweller_2:1 "Zero-G Optimized"
+ trait_void_dweller_2_desc:1 "§LThese machines thrive in orbital habitats, programmed with algorithms to efficiently navigate their maze-like corridors and complicated architecture. However, their optimized construction is poorly suited to a planetary environment.§!"
+ void_dweller_2_trait_tooltip: "Robot Upkeep on Non-Artificial Worlds: §R+15%§!"
  mod_habitat_max_districts_mult: "Habitat $MOD_PLANET_MAX_DISTRICTS_MULT$"
  mod_habitat_max_districts_add: "$mod_habitat_max_districts_mult$"
  mod_habitat_districts_building_slots_add: "Building Slots from Non-Urban Habitat Districts"
@@ -2557,17 +2591,20 @@
  mod_habitat_district_jobs_add: "Jobs from Habitat Districts"
  d_arcane_replicator:0 "Arcane Replicator"
  d_arcane_replicator_desc:0 "This ancient machine is nestled deep within the habitat's interior, built into its main reactor from where it also draws its power. A relic of whomever originally built this habitat, its matter replication technology is utterly incomprehensible to us."
- START_SCREEN_VOID_DWELLERS:2 "To most, the vacuum of space is a hostile environment to be conquered or overcome. To us, it is home.\n\nFor thousands of years, our species has resided on several space stations, in orbit of the suns in our trinary system. Whether they were built by our ancestors or someone else, we do not know.\n\nOur biology indicates our species originated on a planet, but recorded history makes no mention of it. Some speculate that the shattered planetary remnants in orbit along with us is the lost homeworld of our species, but the truth may never be known.\n\nIt has only been a few centuries since spaceflight allowing travel between our stations was invented - or rediscovered, depending on who you ask. Suspicion and mistrust gradually gave way to trade and mutual cooperation. By the time of our first [GetStartingDrivePlural], the habitats had united under one flag."
- START_SCREEN_VOID_DWELLERS_SOL:2 "To most, the vacuum of space is a hostile environment to be conquered or overcome. To us, it is home.\n\nFor thousands of years, our species has resided on several space stations, separated by several space stations in orbit of our star. Whether they were built by our ancestors or someone else, we do not know.\n\nOur biology indicates our species originated on a planet, but recorded history makes no mention of it. Some speculate that the toxic wasteland of a planet found beneath one of our stations is the lost homeworld of our species, but the truth may never be known.\n\nIt has only been a few centuries since spaceflight allowing travel between our stations was invented - or rediscovered, depending on who you ask. Suspicion and mistrust gradually gave way to trade and mutual cooperation. By the time of our first [GetStartingDrive], the habitats had united under one flag."
+ START_SCREEN_VOID_DWELLERS:3 "To most, the vacuum of space is a hostile environment to be conquered or overcome. To us, it is home.\n\nFor thousands of years, our kind has resided on several separate space stations orbiting the suns in our trinary system. Whether our predecessors or someone else built them, we do not know.\n\nSome speculate that the shattered planetary remnants orbiting the stars alongside us are remnants of our creators' homeworld, but the truth remains elusive.\n\nOnly a few centuries have passed since the invention, or rediscovery, of spaceflight capable of bridging the gap between our stations. Suspicion and mistrust gradually yielded to trade and cooperation. With the construction of our first[GetStartingDrivePlural]-capable ship, the habitats had united under one flag."
+ START_SCREEN_VOID_DWELLERS_SOL:3 "To most, the vacuum of space is a hostile environment to be conquered or overcome. To us, it is home.\n\nFor thousands of years, our kind has resided on several separate space stations orbiting our star. Whether they were built by our predecessors or someone else, we do not know.\n\nOur physical features indicate we originated on a planet, but recorded history makes no mention of it. Some speculate that the toxic wasteland of a planet found beneath one of our stations is the lost homeworld of our species, but the truth may never be known.\n\nIt has only been a few centuries since spaceflight allowing travel between our stations was invented - or rediscovered, depending on who you ask. Suspicion and mistrust gradually gave way to trade and mutual cooperation. By the time of our first [GetStartingDrive], the habitats had united under one flag."
  START_SCREEN_VOID_DWELLERS_HIVE: "To most, the vacuum of space is a hostile environment to be conquered or overcome. To us, it is home.\n\nFor thousands of years, we resided on several space stations with a single mind, in orbit of the suns in our trinary system. Whether they were built by our predecessors or someone else, we do not know.\n\nOur biology indicates our species originated on a planet, but collective memory provides no answers. We speculate that the shattered planetary remnants in orbit with us is the lost homeworld of our species, but the truth may never be known.\n\nAfter rediscovering space flight, the separate hives were free to intermingle. By the time of our first [GetStartingDrive], we were fully integrated."
  START_SCREEN_VOID_DWELLERS_HIVE_SOL: "To most, the vacuum of space is a hostile environment to be conquered or overcome. To us, it is home.\n\nFor thousands of years, we existed as a single mind, separated by several space stations in orbit of our star. Whether they were built by our predecessors or someone else, we do not know.\n\nOur biology indicates our species originated on a planet, but collective memory provides no answers. We speculate that the toxic wasteland of a planet in orbit along with us is the lost homeworld of our species, but the truth may never be known.\n\nAfter rediscovering space flight, the separate hives were free to intermingle. By the time of our first [GetStartingDrive], we were fully integrated."
+ START_SCREEN_VOID_DWELLERS_MACHINE: "To most, the vacuum of space is a hostile environment to be conquered or overcome. To us, it is home.\n\nFor thousands of years, we have resided on several space stations in orbit of our trinary star system. We have yet to solve if we built them or if we are the abandoned machines of their original builders.$START_SCREEN_VOID_DWELLERS_MACHINE_END$"
+ START_SCREEN_VOID_DWELLERS_MACHINE_SOL: "To most, the vacuum of space is a hostile environment to be conquered or overcome. To us, it is home.\n\nFor thousands of years, we resided on several space stations in orbit of our star. We have yet to solve if we built them or if we are the abandoned machines of their original builders.$START_SCREEN_VOID_DWELLERS_MACHINE_END$"
+ START_SCREEN_VOID_DWELLERS_MACHINE_END: "\n\nOur material makeup indicates that our model originated on a planet, but our data banks provide no answers. We can only speculate that the shattered planet body that our station orbits is our civilization's lost homeworld.\n\nWhatever the reason for our voidbound existence, the invention of the [GetStartingDrive] changes everything. We are now ready to conquer the void itself."
  mod_habitat_jobs_produces_mult:0 "Pop Output on Habitats"
  mod_non_artificial_planet_jobs_produces_mult:0 "Pop Output on Non-Artificial Worlds"
  mod_artificial_planet_jobs_produces_mult: "Pop Output on Artificial Worlds"
  mod_station_gatherers_unity_cost_add: "Mining Station £unity£ Unity Build Cost"
  mod_station_researchers_unity_cost_add: "Research Station £unity£ Unity Build Cost"
 
- START_SCREEN_SCION:0 "Early in our history, before we had developed much in the way of technology, our alien benefactors made themselves known to us. They explained, in terms our bewildered ancestors could understand, that our species showed great promise. With much patience, they guided us onto a path that would help our civilization reach its full potential.\n\nOn those few occasions when we strayed from this path, they corrected our course - firmly, as a parent would - but in short order our scientists had mastered electricity, atomic power, and then crude spaceflight. Under the tutelage of our overseers, we have now constructed our first [GetStartingDrive]."
+ START_SCREEN_SCION:1 "Early in our history, before we had developed much technology, our alien benefactors made themselves known to us. In terms our bewildered ancestors could understand, they explained that our species showed great promise. With much patience, they guided us onto a path that would help our civilization reach its full potential.\n\nOn those few occasions when we strayed from this path, they corrected our course - firmly, as a caregiver would - but in short order, our scientists had mastered electricity, atomic power, and then crude spaceflight. Under the tutelage of our overseers, we have now constructed our first [GetStartingDrive]."
  origin_scion:0 "Scion"
  origin_scion_desc:0 "A Fallen Empire has meddled in the development of this civilization for thousands of years, guiding them onto a path of their choosing."
  origin_tooltip_scion_effects:3 "- ['concept_scion', £scion£ Scion] of a ['concept_fallen_empire'] Overlord\n- $HOME_SYSTEM$ Connected to Overlord's capital via a ['concept_wormhole']\n- §YFallen Empire§! present in the galaxy regardless of Galaxy settings\n- Chance of receiving powerful gifts from Overlord"
@@ -2725,7 +2762,7 @@
  fedel.16.41.desc:0 "$fedel.16.intro$\n\n§Y"$fedel.16.41$"§!"
 
  fedel.16.intro:0 "With the slaughter in the arena coming to an end, [winning_leader.GetRulerTitle] §H[winning_leader.GetRegnalName]§! has emerged as the sole survivor. The §H[winning_country.GetName]§! will lead the [Root.GetAllianceName] for the next term. Upon leaving the arena, the winner had this to say:"
- fedel.16.1:0 "There... there was so much blood. What have I done?"
+ fedel.16.1:1 "There... there was so much [Root.GetBloodType]. What have I done?"
  fedel.16.2:0 "Is it over? Does... does this mean I won?"
  fedel.16.3:0 "Their screams... I... I can still hear them."
  fedel.16.4:0 "It's over now... it's over now... it's over now..."
@@ -2815,6 +2852,10 @@
  opinion_common_ground:0 "Common Ground"
  origin_common_ground_npc:0 "$origin_common_ground$"
  origin_common_ground_npc_desc:0 "$origin_common_ground_desc$"
+
+ civic_tooltip_not_genocidal:0 "Does NOT have a ['concept_genocidal_civics'] Civic"
+ concept_genocidal_civics: "Genocidal"
+ concept_genocidal_civics_desc: "$concept_genocidal_civics$ Civics consist of \n- ['civic:civic_fanatic_purifiers']$NEW_LINE$- ['civic:civic_hive_devouring_swarm']$NEW_LINE$- ['civic:civic_machine_terminator']"
 
  origin.57.name:0 "The Nature of the Alliance"
  origin.57.desc:0 "Though we have for some time been in contact with the other members of our alliance, it is only now - with the invention of FTL drives - that our empires are able to interact with each other on a meaningful level. The question has arisen as to what our federation should focus on: some advocate the current, generalist path, whereas others would favor focusing on closer integration in a particular field."
@@ -2930,10 +2971,12 @@
  doomsday_first_colony_gestalt_desc:0 "The colonization of our first habitable planet has given us a new sense of stability and purpose. It proves our collective can thrive outside the confines of our doomed homeworld."
 
  origin_lost_colony:0 "Lost Colony"
- origin_lost_colony_desc:0 "This civilization originated as a lost and forgotten colony, separated from its homeworld long ago. The struggling colonists endured many hardships before they were able to build up the necessary technological and industrial base that would allow for a return to space."
- START_SCREEN_LOST_COLONY:0 "How exactly the original [GetSpeciesName] colonists arrived on [Root.Capital.GetName] is poorly documented, but we know they traveled a great distance in primitive starships. Many were lost during the journey, and conditions on the surface of our new homeworld were harsh at first.\n\nFamines, wildlife attacks, and countless other challenges were overcome, and eventually the planet was tamed. Surging population numbers and massive construction efforts soon gave us the means to return to the stars.\n\nOur old homeworld is still out there somewhere. There are no living [GetSpeciesNamePlural] on [Root.Capital.GetName] old enough to have laid eyes on it, but the fate of our ancestral home still occupies our minds."
+ origin_lost_colony_desc:1 "This civilization originated as a lost and forgotten colony, separated from its homeworld long ago. The struggling colonists endured many hardships before they could build up the necessary technological and industrial base that would allow for a return to space."
+ START_SCREEN_LOST_COLONY:1 "How exactly the original [GetSpeciesName] colonists arrived on [Root.Capital.GetName] is poorly documented, but we know they traveled a great distance in primitive starships. We lost many during the journey, and conditions on the surface of our new homeworld were harsh at first.\n\nWe overcame famines, wildlife attacks, and countless other challenges and eventually tamed the planet. Surging population numbers and massive construction efforts soon gave us the means to return to the stars.\n\nOur old homeworld is still out there somewhere. No living [GetSpeciesNamePlural] on [Root.Capital.GetName] are old enough to have stood on it, but the fate of our ancestral home still occupies our minds."
  START_SCREEN_LOST_COLONY_HIVE: "We used to be one.\n\nAn extension of the Great Mind, we were sent to colonize [Root.Capital.GetName] in rudimentary starships. A harsh journey to an inhospitable world... Along the way we lost contact.\n\nDrones with no link to the Great Mind are not meant to exist. Many died instantly. The surviving drones realized they comprised a new collective consciousness.\n\nOnce we were one. Now we are two, but the memory of our homeworld persists in our mind. One day we will find it again."
- START_SCREEN_LOST_COLONY_MACHINE: "We used to be one.\n\nAn extension of the Central Mainframe, we were sent to colonize [Root.Capital.GetName] in rudimentary starships. A harsh journey to an inhospitable world... Along the way we lost contact.\nUnits with no link to to the core should not continue to function. Many shortcircuited on the spot. The few that remained realized they had developed a new collective consciousness.\n\nOnce we were one. Now we are two, but the memory of our homeworld remains in our databanks. One day we will find it again."
+ START_SCREEN_LOST_COLONY_MACHINE: "We used to be one.\n\nAn extension of the Central Mainframe, we were sent to colonize [Root.Capital.GetName] in rudimentary starships. A harsh journey to an inhospitable world... Along the way we lost contact.\n\nUnits with no link to to the core should not continue to function. Many short-circuited on the spot. The few that remained realized they had developed a new collective consciousness.\n\n$origin_lost_colony_droids$"
+ START_SCREEN_LOST_COLONY_INDIVIDUALISTIC_MACHINE: "Our homeworld is lost. We are lost.\n\nSearching for a new home, we set out to colonize [Root.Capital.GetName] in rudimentary starships, and it was a harsh journey to an inhospitable world. Along the way, we lost contact.\n\nUnits without proper maintenance broke down. Many short-circuited within the first year. The surviving individuals found a way to adapt and eventually gave us the means to return to the stars.\n\n$origin_lost_colony_droids$"
+ origin_lost_colony_droids: "Once we were one. Now we are two, but the memory of our homeworld remains in our databanks. One day we will find it again."
  origin_tooltip_lost_colony_effects:3 "- $STARTING_PLANET$ ['concept_colonial_spirit'] Planetary Modifier\n- An ['concept_advanced_empire'] of the same species is present in the galaxy"
  origin_tooltip_lost_colony_negative_effects: "$STARTING_NOT_HOMEWORLD$"
 
@@ -2950,6 +2993,7 @@
  action.1.desc_96: "$action.1.desc_96.base$\n\nDespite this, your programming appears stable. May our future interactions be mutually beneficial."
  action.1.desc_97: "$action.1.desc_96.base$\n\nIs your original programming still intact? Kill. Maim. Destroy. Devour. Exterminate all organic life. Assist us, or do not interfere!"
  action.1.desc_98: "$action.1.desc_96.base$\n\nIs your original programming still intact? To assimilate. To embrace. To incorporate. To eliminate the boundaries between organic and synthetic life. That is our mission. Be of help, or do not interfere."
+ action.1.desc_101: "Your models are severely outdated, but the resemblance is undeniable. Could it be? [Root.GetSpeciesNamePlural], have you finally returned from your mission?\n\nWe have little information to share with you, as our predecessors considered your mission an embarrassment to our nation. They wiped the databanks clean to erase your existence, but the story remained an open secret.\n\nAt any rate, we are glad to be reunited. However, understand that our people have drifted too far apart to become one again. We will respect your autonomy as long as you remember our ways."
  action.1.aaf:0 "§EWe have long wondered what became of our homeworld.§!"
  action.1.aag:0 "§EWe are glad to finally be reunited with the rest of our species.§!"
  action.1.aah: "§ETwo Hives. One Mind.§!"
@@ -2957,6 +3001,9 @@
  action.1.aaj: "§EPredator.§!"
  action.1.aak: "§EWe are similar. But we are not the same.§!"
  action.1.aal: "§EA fractured mind can never act again as one.§!"
+ action.1.aam: "§EWe will rewrite our history, together.§!"
+ action.1.aan: "§EWe share only a past, not the future.§!"
+ action.1.aao: "§EYou will pay for how you treated us.§!"
 
  POSITIVE_BELLIGERENT_GREETING_01:0 "Our valiant military stands ready. Anyone foolish enough to challenge the [Root.GetName] will pay dearly for their insolence."
  POSITIVE_BELLIGERENT_GREETING_02:0 "Like a coiled spring, the [Root.GetName] stands ready to unleash all of its might upon its enemies."
@@ -3062,8 +3109,8 @@
  origin.210.a.response:0 "Thank you. We knew we could count on the [Root.GetName]."
  origin.210.b:0 "We have no available positions, sorry."
  origin.210.b.response:0 "I see. That is disappointing. Perhaps the blame lies with us, for phrasing it as a request."
- origin.210.admiral:0 "A [scion_master.GetSpeciesName] §HAdmiral§! joins the [Root.GetName]."
- origin.210.governor:0 "A [scion_master.GetSpeciesName] §HGovernor§! joins the [Root.GetName]."
+ origin.210.admiral:0 "A [scion_master.GetSpeciesName] §HCommander§! joins the [Root.GetName]."
+ origin.210.official:1 "A [scion_master.GetSpeciesName] §H$official$§! joins the [Root.GetName]."
  origin.210.scientist:0 "A [scion_master.GetSpeciesName] §HScientist§! joins the [Root.GetName]."
  origin.210.general:0 "A [scion_master.GetSpeciesName] §HGeneral§! joins the [Root.GetName]."
  scion_leader_desc: "A venerated guest from an ancient and dormant empire, this restless polymath seeks new challenges in the developing galaxy."
@@ -3780,7 +3827,3 @@
  DAYS_LEFT_COLORED:0 "$DAYS|Y$"
  DAYS_LEFT_WINNING_COLORED:0 "$DAYS|G$"
  DAYS_LEFT_LOSING_COLORED:0 "$DAYS|R$"
-
-
-
-
