@@ -4,5 +4,5 @@ tags={
 	"Translation"
 }
 picture="thumbnail.png"
-supported_version="v3.*"
+supported_version="v4.*"
 remote_file_id="2816453449"
