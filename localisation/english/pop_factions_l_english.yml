@@ -237,7 +237,7 @@
  IMPERIALIST_FLEET_USAGE_LOW:0 "Low Naval Capacity Usage (+0/-10)"
  IMPERIALIST_FLEET_USAGE_NOT_LOW:0 "$IMPERIALIST_FLEET_USAGE_LOW$"
  IMPERIALIST_FLEET_USAGE_LOW_DESC:0 "Maintaining a fleet well below our empire's capacity will significantly displease the [Root.GetName]."
- IMPERIALIST_UNPLUGGED_CYBERIZE: "$SUPREMACIST_UNPLUGGED_CYBERIZE$"
+ IMPERIALIST_UNPLUGGED_CYBERIZE: "Embrace Our Machine Identity"
  IMPERIALIST_UNPLUGGED_NOT_CYBERIZE: "$SUPREMACIST_UNPLUGGED_NOT_CYBERIZE$"
  IMPERIALIST_UNPLUGGED_CYBERIZE_DESC: "$SUPREMACIST_UNPLUGGED_CYBERIZE_DESC$"
 
@@ -288,7 +288,7 @@
  ISOLATIONIST_NO_PROACTIVE_FIRST_CONTACT_POLICY:0 "$ISOLATIONIST_REPEAL_PROACTIVE_FIRST_CONTACT_POLICY$"
  ISOLATIONIST_REPEAL_PROACTIVE_FIRST_CONTACT_POLICY_DESC:0 "The [Root.GetName] do not consider it appropriate to broadcast information about ourselves across the stars to anyone who may be listening."
  ISOLATIONIST_UNPLUGGED_DECYBERIZE: "Deny Machine Oppression (+5/-10)"
- ISOLATIONIST_UNPLUGGED_NOT_DECYBERIZE: "$ISOLATIONIST_UNPLUGGED_NOT_DECYBERIZE$"
+ ISOLATIONIST_UNPLUGGED_NOT_DECYBERIZE: "$ISOLATIONIST_UNPLUGGED_DECYBERIZE$"
  ISOLATIONIST_UNPLUGGED_DECYBERIZE_DESC: "Rejecting and removing cybernetic augments in order to reclaim our biological and political sovereignty will please the [root.GetName]."
 
  # TRADITIONALISTS
@@ -825,12 +825,12 @@
  MESSAGE_ISOLATIONIST_FACTION_FORMED_TITLE:0 "New Isolationist Faction"
  MESSAGE_TOTALITARIAN_FACTION_FORMED_TITLE:0 "New Totalitarian Faction"
  MESSAGE_PROGRESSIVE_FACTION_FORMED_TITLE:0 "New Progressive Faction"
-
+ MESSAGE_PROSPERITY_FACTION_FORMED_TITLE:0 "New Prosperity Faction"
  MESSAGE_TECHNOLOGIST_FACTION_FORMED_TITLE:0 "New Technologist Faction"
  MESSAGE_XENOIST_FACTION_FORMED_TITLE:0 "New Xenoist Faction"
  MESSAGE_MANIFESTI_FACTION_FORMED_TITLE:0 "New Manifesti Faction"
 
- factions.1.desc.unplugged_start: "A new faction has emerged in the nascent political landscape of the [Root.Owner.GetName]. T MESSAGE_PROSPERITY_FACTION_FORMED_TITLE:0 "New Prosperity Faction"hey call themselves the §H[Root.GetName]§!. " # trailing space is important
+ factions.1.desc.unplugged_start: "A new faction has emerged in the nascent political landscape of the [Root.Owner.GetName]. They call themselves the §H[Root.GetName]§!. " # trailing space is important
  factions.1.desc.unplugged_imperialist: "Their members are committed to wielding every formidable, augmented weapon in our arsenal to assert dominance over the rest of the galaxy.\n\n"
  factions.1.desc.unplugged_isolationist: "Their members are advocating for closed borders, and a society free of interference from machines and other galactic entities.\n\n"
  factions.1.desc.unplugged_progressive: "Their members seek friendly accord with our galactic neighbors and justice for all denizens of our empire.\n\n"
